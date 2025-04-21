@@ -9,6 +9,8 @@ of the other [Spring AI Kata repository](https://github.com/scalasm/springai-kat
 - Apache Maven 3.9.x 
 - OPENAI API Key - to be obtained by the [Open AI Console](https://platform.openai.com/settings/organization/api-keys)
   - ensure there is an environment variable called `OPENAI_API_KEY` set and your will be ready to go!
+- NINJAS_API_KEY - to be obtained from [API Ninjas](https://api-ninjas.com/) - the free tier is ok!
+  - We want to consume the [Weather API](https://api-ninjas.com/api/weather)
 
 # How to run
 

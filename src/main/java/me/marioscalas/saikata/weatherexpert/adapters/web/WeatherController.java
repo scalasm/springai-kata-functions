@@ -1,7 +1,7 @@
 package me.marioscalas.saikata.weatherexpert.adapters.web;
 
 import jakarta.validation.Valid;
-import me.marioscalas.saikata.weatherexpert.AIPromptService;
+import me.marioscalas.saikata.weatherexpert.WeatherPromptService;
 import me.marioscalas.saikata.weatherexpert.model.Answer;
 import me.marioscalas.saikata.weatherexpert.model.Question;
 
@@ -17,19 +17,19 @@ import io.swagger.v3.oas.annotations.Operation;
  */
 @RestController
 @RequestMapping("/api/v1")
-public class AIPromptController {
+public class WeatherController {
     
-    private final AIPromptService aiPromptService;
+    private final WeatherPromptService weatherPromptService;
     
-    AIPromptController(AIPromptService aiPromptService) {
-        this.aiPromptService = aiPromptService;
+    WeatherController(WeatherPromptService weatherPromptService) {
+        this.weatherPromptService = weatherPromptService;
     }
     
     @Operation(summary = "Submit a Weather Prompt to the Weather expert")
     @PostMapping(value = "/weather", produces = "application/json", consumes = "application/json")
     public ResponseEntity<Answer> submitQuestionAboutWeather(@RequestBody @Valid Question question) {
         return ResponseEntity.ok().body(
-            aiPromptService.getAnswer(question)    
+            weatherPromptService.getAnswer(question)    
         );
     }
 }
