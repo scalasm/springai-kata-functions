@@ -3,7 +3,7 @@ spring:
     name: springai-kata
   ai:
     openai:
-      api-key: ${OPENAI_API_KEY}
+      api-key: ${OPENAI_API_KEY:"Please set your OpenAI API key"}
   # Enable OpenAI optimized model for embeddings
       embedding:
         options:
@@ -19,4 +19,4 @@ springdoc:
 
 # Ninjas API configuration
 ninjas:
-  api-key: ${NINJAS_API_KEY} 
+  api-key: ${NINJAS_API_KEY:"Please set your Ninjas API key"} 
