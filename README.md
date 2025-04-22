@@ -4,7 +4,7 @@ This is my sandbox for working with Spring AI using more advanced features like 
 of the other [Spring AI Kata repository](https://github.com/scalasm/springai-kata) which deals with more common topics!
 
 # Requirements
-- JDK 24 or better
+- JDK 21 or better
   - I use Amazon Corretto 21 but anything should be fine
 - Apache Maven 3.9.x 
 - OPENAI API Key - to be obtained by the [Open AI Console](https://platform.openai.com/settings/organization/api-keys)
