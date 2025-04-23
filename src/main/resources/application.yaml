@@ -20,3 +20,10 @@ springdoc:
 # Ninjas API configuration
 ninjas:
   api-key: ${NINJAS_API_KEY:"Please set your Ninjas API key"} 
+
+
+logging:
+  level:
+    org.springframework.web: INFO
+    org.springframework.boot: INFO
+    me.marioscalas.saikata: DEBUG
