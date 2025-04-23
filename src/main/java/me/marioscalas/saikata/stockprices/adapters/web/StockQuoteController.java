@@ -16,7 +16,7 @@ import me.marioscalas.saikata.stockprices.model.StockPriceQuestion;
  * Simple REST API for a chatbot.
  */
 @RestController
-@RequestMapping("/api/v1/ticker")
+@RequestMapping("/api/v1/stockprice")
 public class StockQuoteController {
     
     private final StockpricesPromptService stockPricesPromptService;
