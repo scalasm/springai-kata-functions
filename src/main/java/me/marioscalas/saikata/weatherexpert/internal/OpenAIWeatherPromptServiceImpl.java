@@ -3,13 +3,9 @@ package me.marioscalas.saikata.weatherexpert.internal;
 import java.util.List;
 
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.messages.Message;
 import org.springframework.ai.chat.messages.SystemMessage;
 import org.springframework.ai.chat.messages.UserMessage;
-import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
-import org.springframework.ai.chat.prompt.PromptTemplate;
-import org.springframework.ai.model.ModelOptionsUtils;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.tool.function.FunctionToolCallback;
@@ -19,9 +15,7 @@ import org.springframework.stereotype.Component;
 
 import jakarta.validation.Valid;
 import me.marioscalas.saikata.weatherexpert.WeatherPromptService;
-import me.marioscalas.saikata.weatherexpert.internal.weather.WeatherRequest;
 import me.marioscalas.saikata.weatherexpert.internal.weather.WeatherRequestV2;
-import me.marioscalas.saikata.weatherexpert.internal.weather.WeatherResponse;
 import me.marioscalas.saikata.weatherexpert.internal.weather.WeatherServiceFunction;
 import me.marioscalas.saikata.weatherexpert.internal.weather.WeatherTools;
 import me.marioscalas.saikata.weatherexpert.model.Answer;
