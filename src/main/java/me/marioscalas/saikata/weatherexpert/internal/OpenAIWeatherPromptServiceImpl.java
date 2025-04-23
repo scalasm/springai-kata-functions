@@ -3,6 +3,9 @@ package me.marioscalas.saikata.weatherexpert.internal;
 import java.util.List;
 
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.messages.Message;
+import org.springframework.ai.chat.messages.SystemMessage;
+import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;
@@ -49,13 +52,17 @@ public class OpenAIWeatherPromptServiceImpl implements WeatherPromptService {
         // 2 - Declarative - Using the "function tools" (OpenAiChatModel)
         // Option 2 looks like the easiest way, tbh
         // See https://docs.spring.io/spring-ai/reference/api/tools-migration.html for more details.
+        Prompt prompt = new Prompt(
+            new SystemMessage(getWeatherPromptTemplate),
+            new UserMessage(question.text())
+        );
 
-//        return getAnswerUsingFunctionsInOptions(question);
-        return getAnswerUsingTools(question);
+        return getAnswerUsingTools(prompt);
+//        return getAnswerUsingFunctionsInOptions(prompt);
     }
 
 
-    private Answer getAnswerUsingFunctionsInOptions(@Valid Question question) {
+    private Answer getAnswerUsingFunctionsInOptions(Prompt prompt) {
         final OpenAiChatOptions chatOptions = OpenAiChatOptions.builder()
             .toolCallbacks(List.of(
                 FunctionToolCallback.builder("getWeather", weatherServiceFunction)
@@ -68,7 +75,7 @@ public class OpenAIWeatherPromptServiceImpl implements WeatherPromptService {
             .build();
 
         final String responseContent = ChatClient.create(chatModel)
-            .prompt(question.text())
+            .prompt(prompt)
             .options(chatOptions)
             .call()
             .content();
@@ -76,9 +83,9 @@ public class OpenAIWeatherPromptServiceImpl implements WeatherPromptService {
         return new Answer(responseContent);
     }
 
-    private Answer getAnswerUsingTools(@Valid Question question) {
+    private Answer getAnswerUsingTools(Prompt prompt) {
         final String responseContent = ChatClient.create(chatModel)
-            .prompt(question.text())
+            .prompt(prompt)
             .tools(weatherTools)
             .call()
             .content();
