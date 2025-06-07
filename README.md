@@ -3,6 +3,11 @@
 This is my sandbox for working with Spring AI using more advanced features like functions integrations: it is a follow up
 of the other [Spring AI Kata repository](https://github.com/scalasm/springai-kata) which deals with more common topics!
 
+There are three kata repositories in this series, to keep things a bit separated
+ - [Spring AI Kata](https://github.com/scalasm/springai-kata) - prompts, RAG with Milvus
+ - [Spring AI Kata with Azure Functions](https://github.com/scalasm/springai-kata-functions) dealing with Azure functions integration: this should be superseded by a [MCP implementation](https://docs.spring.io/spring-ai-mcp/reference/spring-mcp.html)
+ - [Spring AI Kata w/ Multimedia content](https://github.com/scalasm/springai-kata-multimedia), deals with image generation, and text2speech
+
 # Requirements
 - JDK 21 or better
   - I use Amazon Corretto 21 but anything should be fine
