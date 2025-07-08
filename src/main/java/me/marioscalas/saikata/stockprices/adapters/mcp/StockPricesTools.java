@@ -1,8 +1,9 @@
-package me.marioscalas.saikata.stockprices.internal;
+package me.marioscalas.saikata.stockprices.adapters.mcp;
 
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Component;
 
+import me.marioscalas.saikata.stockprices.internal.StockPricesClient;
 import me.marioscalas.saikata.stockprices.internal.StockPricesClient.StockPricesRequest;
 import me.marioscalas.saikata.stockprices.internal.StockPricesClient.StockPricesResponse;
 

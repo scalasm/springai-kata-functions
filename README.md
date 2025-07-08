@@ -1,11 +1,11 @@
 # Spring-AI kata (Functions)
 
 This is my sandbox for working with Spring AI using more advanced features like functions integrations: it is a follow up
-of the other [Spring AI Kata repository](https://github.com/scalasm/springai-kata) which deals with more common topics!
+of the other [Spring AI Kata Functions](https://github.com/scalasm/springai-kata-functions) which deals with OpenAI functions and their invocations!
 
-There are three kata repositories in this series, to keep things a bit separated
+In addition to this [Spring AI MCP Server](https://github.com/scalasm/springai-kata-mcp), there are four kata repositories in this series, to keep things a bit separated:
  - [Spring AI Kata](https://github.com/scalasm/springai-kata) - prompts, RAG with Milvus
- - [Spring AI Kata with Azure Functions](https://github.com/scalasm/springai-kata-functions) dealing with Azure functions integration: this should be superseded by a [MCP implementation](https://docs.spring.io/spring-ai-mcp/reference/spring-mcp.html)
+ - [Spring AI Kata with Azure Functions](https://github.com/scalasm/springai-kata-mcp) dealing with Azure functions integration: this should be superseded by a [MCP implementation](https://docs.spring.io/spring-ai-mcp/reference/spring-mcp.html)
  - [Spring AI Kata w/ Multimedia content](https://github.com/scalasm/springai-kata-multimedia), deals with image generation, and text2speech
 
 # Requirements
@@ -32,4 +32,5 @@ mvn spring-boot:run
 There is a [Swagger UI](http://localhost:8080/swagger-ui/index.html) available.
 
 # References
-* [Spring AI - Begineer to Guru](https://www.udemy.com/course/spring-ai-beginner-to-guru) has been my initial reference
+- [Spring AI - Begineer to Guru](https://www.udemy.com/course/spring-ai-beginner-to-guru) has been my initial reference
+- [Understand SSE MCP SERVER with Spring Boot and Spring AI | Beginner Tutorial](https://www.youtube.com/watch?v=n5DG0uClbdo) this is a great reference for both building your MCP server ground up or troubleshooting your own!

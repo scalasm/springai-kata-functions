@@ -5,16 +5,16 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.6</version>
+		<version>3.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<groupId>me.marioscalas</groupId>
-	<artifactId>springai-kata-functions</artifactId>
+	<artifactId>springai-kata-mcp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	
-	<name>springai-kata-functions</name>
-	<description>Sandbox for Spring-AI kata with functions integration</description>
+	<name>springai-kata-mcp</name>
+	<description>Sandbox for Spring-AI kata with MCP integration</description>
 	
 	<url/>
 	
@@ -27,10 +27,10 @@
 	</licenses>
 	
 	<scm>
-		<connection>scm:git:https://github.com/scalasm/springai-kata-functions.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:scalasm/springai-kata-functions.git</developerConnection>
+		<connection>scm:git:https://github.com/scalasm/springai-kata-mcp.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:scalasm/springai-kata-mcp.git</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/scalasm/springai-kata-functions</url>
+		<url>https://github.com/scalasm/springai-kata-mcp</url>
 	</scm>
 
 	<properties>
@@ -41,8 +41,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.ai</groupId>
+			<artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>
 		</dependency>
 		<dependency> 
 			<groupId>org.springframework.boot</groupId> 
@@ -94,7 +94,7 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
--->		
+-->
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-tika-document-reader</artifactId>
