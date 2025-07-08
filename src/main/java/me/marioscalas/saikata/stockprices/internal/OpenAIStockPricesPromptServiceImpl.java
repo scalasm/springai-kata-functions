@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 import jakarta.validation.Valid;
 import me.marioscalas.saikata.stockprices.StockpricesPromptService;
-import me.marioscalas.saikata.stockprices.adapters.mcp.StockPricesTools;
 import me.marioscalas.saikata.stockprices.model.StockPriceAnswer;
 import me.marioscalas.saikata.stockprices.model.StockPriceQuestion;
 

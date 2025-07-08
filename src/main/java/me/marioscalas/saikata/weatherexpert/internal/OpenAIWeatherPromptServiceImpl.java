@@ -15,9 +15,9 @@ import org.springframework.stereotype.Component;
 
 import jakarta.validation.Valid;
 import me.marioscalas.saikata.weatherexpert.WeatherPromptService;
-import me.marioscalas.saikata.weatherexpert.adapters.mcp.WeatherTools;
 import me.marioscalas.saikata.weatherexpert.internal.weather.WeatherRequestV2;
 import me.marioscalas.saikata.weatherexpert.internal.weather.WeatherServiceFunction;
+import me.marioscalas.saikata.weatherexpert.internal.weather.WeatherTools;
 import me.marioscalas.saikata.weatherexpert.model.Answer;
 import me.marioscalas.saikata.weatherexpert.model.Question;
 

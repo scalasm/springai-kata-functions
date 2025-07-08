@@ -10,25 +10,7 @@ spring:
           model: text-embedding-3-small
       chat:
         options:
-          model: gpt-4.1
-    mcp:
-      server:
-        enabled: true  # SSE server is enabled
-        stdio: false # Disable STDIO mode
-        name: springai-kata-mcp-server
-        version: 1.0.0
-        type: sync
-        instructions: "This server provides a set of tools for stock prices and weather information. Use the tools to get real-time data."
-        tool-change-notification: true
-        prompt-change-notification: true
-        resource-change-notification: true
-        sse-endpoint: /sse
-        sse-message-endpoint: /mcp/messages
-        capabilities:
-          tool: true
-          resource: true
-          prompt: true
-          completion: true
+          model: gpt-4-turbo
 
 # /api-docs endpoint custom path
 springdoc:
@@ -42,7 +24,6 @@ ninjas:
 
 logging:
   level:
-    '[io.modelcontextprotocol]': TRACE
     org.springframework.web: INFO
     org.springframework.boot: INFO
     me.marioscalas.saikata: DEBUG
